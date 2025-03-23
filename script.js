@@ -148,7 +148,8 @@ function showHint() {
     const pattern = judgePattern();
     const title1 = "100に近い数同士 <br> → 100との差分を利用"
     const arrHint1 = [
-        `100^2 - 100(X  +  Y) + (X  *  Y)<br>`,
+        `100^2`,
+        ` - 100(X  +  Y) + (X  *  Y)<br>`,
         `X: 100 - ${num1}`,
         `Y: 100 - ${num2}`
     ];
@@ -160,11 +161,13 @@ function showHint() {
         `+ 　　? ?`,
         `-----------`
     ];
-    const title3 = "十の位が共通 → 同じ数でくくる"
+    const title3 = "十の位が共通 <br> → 同じ数でくくる"
     const arrHint3 = [
-        `上2桁: (${num1} + ${ones2}) * ${tens1*10} = ??`,
-        `　　　 ↑数1　↑数2 (一の位)`,
-        `下2桁: ${ones1} * ${ones2} = ??<br>`,
+        `上2桁:?`,
+        ` (${num1} + ${ones2}) * ${tens1*10} = ??`,
+        `　↑数1　↑数2 (一の位)`,
+        `下2桁:`,
+        `　${ones1} * ${ones2} = ??<br>`,
         `　? ? 0`,
         `+ 　? ?`,
         `---------`

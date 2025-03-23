@@ -9,8 +9,8 @@ h2 {
 
 /* body */
 body {
-    margin: 1rem;    
-    font-size: 1rem;
+    margin: 1rem;
+    font-size: 1.2rem;
     color: #778899;
     background-color: #f5f5f5;
 }
@@ -28,6 +28,8 @@ button {
     color: white;
     border: 2px solid #778899;
     padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    font-size: 1rem;
+   
     border-radius: 3px;
     transition: 0.1s ease-in-out;
 }
@@ -41,10 +43,9 @@ button:hover {
     color: white;
     border: 2px solid #778899;
     margin: 0.15rem 0rem 0.15rem 0rem;
-    width: 3.5rem;
-    height: 3rem;
-    font-size: 18px;
-    border-radius: 3px;
+    width: 6rem;
+    height: 4rem;
+    font-size: 2rem;
     transition: 0.1s ease-in-out;
 }
 #btn_openRangeModal {
@@ -61,20 +62,20 @@ button:hover {
 
 /* others */
 #question {
-    font-size: 22px;   
+    margin: 0rem 0rem -1rem 0rem;
+    font-size: 3rem;   
     font-weight: bold;
-    margin: 0rem;
 }
 .answer {
-    font-size: 22px;   
+    font-size: 2rem;   
     color: #778899;
 }
 #answer {
     padding: 0.4rem;
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 0rem;
     width: 8rem;
     border: 2px solid #778899;
-    font-size: 22px;   
+    font-size: 2.5rem;   
     color: #778899;
 }
 input:focus {

@@ -119,7 +119,9 @@ function generateQuestion() {
     elemId_result.textContent = "　";                           // 結果をリセット
     elemId_hint.textContent = "";                               // ヒントをリセット
     elemId_answer.value = "";                                   // 入力欄をクリア
-    elemId_answer.focus();                                      // 入力欄にフォーカス
+    if (isSmartPhone === false) {
+        elemId_answer.focus();                                  // PCからのアクセス時のみ、入力欄にフォーカス        
+    }
 }
 
 // 解答をチェック
@@ -211,7 +213,7 @@ elemId_answer.addEventListener("keydown", function (event) {
         closeModal(hintModal);
     } else {
         if (event.key === "Enter") {                             // 上記以外の場合、Enter押下で解答をチェック
-            checkAnswer();   
+            checkAnswer();
         }
     }
 });
@@ -248,14 +250,28 @@ closeHintModalBtn.addEventListener("click", function () {        // 非表示（
 
 // 背景クリック
 window.addEventListener("click", function (event) {
-    elemId_answer.focus();                                      // 入力欄にフォーカス
-    if (event.target === rangeModal) {                          // 設定モーダル
+    if (isSmartPhone === false) {
+        elemId_answer.focus();                                  // PCからのアクセス時のみ、入力欄にフォーカス        
+    }
+    if (event.target === rangeModal) {                          // 設定モーダルを閉じる
         closeModal(rangeModal);
-    } else if (event.target === hintModal) {                    // ヒントモーダル
+    }
+    if (event.target === hintModal) {                           // ヒントモーダルを閉じる
         closeModal(hintModal);
-    } else {
     }
 });
+
+// スマホ判定（画面幅640px以下）
+function checkSmartPhone() {
+    if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// デバイスの確認
+let = isSmartPhone = checkSmartPhone();
 
 // 初回の問題を生成
 let num1, num2, correctAnswer;

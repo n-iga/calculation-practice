@@ -1,0 +1,123 @@
+/* header */
+h1 {
+    font-size: 1.3rem;
+}
+h2 {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+}
+
+/* body */
+body {
+    margin: 1rem;    
+    font-size: 1rem;
+    color: #778899;
+    background-color: #f5f5f5;
+}
+div {
+    margin-top: 1.8rem;    
+    margin-right: 0.8rem;    
+    margin-bottom: 1.8rem;    
+    margin-left: 0.8rem;
+    text-align: center;
+}
+
+/* buttons */
+button {
+    background-color: #778899;
+    color: white;
+    border: 2px solid #778899;
+    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    border-radius: 3px;
+    transition: 0.1s ease-in-out;
+}
+button:hover {
+    background-color: white;
+    color: #778899;
+    border: 2px solid #778899;
+}
+.btn_num {
+    background-color: #778899;
+    color: white;
+    border: 2px solid #778899;
+    margin: 0.15rem 0rem 0.15rem 0rem;
+    width: 3.5rem;
+    height: 3rem;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.1s ease-in-out;
+}
+#btn_openRangeModal {
+    margin-left: 0.5rem;   
+}
+
+/* line */
+.line_01 {
+    border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #778899;
+    margin-bottom: -0.5rem;
+}
+
+/* others */
+#question {
+    font-size: 22px;   
+    font-weight: bold;
+    margin: 0rem;
+}
+.answer {
+    font-size: 22px;   
+    color: #778899;
+}
+#answer {
+    padding: 0.4rem;
+    margin: 0rem 0rem 1rem 0rem;
+    width: 8rem;
+    border: 2px solid #778899;
+    font-size: 22px;   
+    color: #778899;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+input::placeholder {
+    color: #778899;
+  }
+#hint {
+    margin: 0.8rem;
+}
+
+/* モーダルの背景 */
+.modal {
+    display: none; /* 初期状態では非表示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒背景 */
+}
+
+/* modal content */
+.modal-content {
+    background-color: white;
+    margin: 10% auto ;
+    padding: 0.8rem 1.2rem 2rem 1.2rem;
+    width: 90%;
+    max-width: 280px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.ptns {
+    margin-left: 1rem;
+}
+/* modal close */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

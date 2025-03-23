@@ -1,3 +1,6 @@
+html {
+    touch-action: manipulation;
+}
 /* header */
 h1 {
     font-size: 1.3rem;
@@ -28,7 +31,7 @@ button {
     color: white;
     border: 2px solid #778899;
     padding: 0.6rem 0.8rem 0.6rem 0.8rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 3px;
     transition: 0.1s ease-in-out;
 }
@@ -63,6 +66,7 @@ button:hover {
 #question {
     margin: 0rem 0rem -1.2rem 0rem;
     font-size: 3rem;   
+    font-weight: bold;
 }
 .answer {
     vertical-align: center;
@@ -87,7 +91,7 @@ input::placeholder {
   }
 #hint {
     margin: 0.8rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* モーダルの背景 */
@@ -114,14 +118,14 @@ input::placeholder {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .ptns {
-    margin-left: 1rem;
+    margin: 0rem 1rem 0rem 1rem ;
     transform: scale(1.5);
     accent-color: #778899;    
 }
 /* modal close */
 .close {
     float: right;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
 }

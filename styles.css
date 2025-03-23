@@ -4,17 +4,19 @@ html {
 /* header */
 h1 {
     font-size: 1.3rem;
+    color: #C1E9E3;
 }
 h2 {
     font-size: 1rem;
     padding-left: 0.8rem;
+    color: #C1E9E3;
 }
 
 /* body */
 body {
     margin: 1rem;
     font-size: 1.2rem;
-    color: #C3ECF3;
+    color: #ffffff;
     background-color: #3A3A3A;
     overflow: hidden;
 }
@@ -28,34 +30,28 @@ div {
 
 /* buttons */
 button {
-    background-color: #C3ECF3;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
     color: #3A3A3A;
-    border: 2px solid #C3ECF3;
-    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    width: 6.2rem;
+    height: 2rem;
     font-size: 1.2rem;
     border-radius: 3px;
     transition: 0.1s ease-in-out;
 }
-
 .btn_num {
-    background-color: #C3ECF3;
-    color: #3A3A3A;
-    border: 2px solid #C3ECF3;
+    background-color: #C1E9E3;
+    border: 2px solid #C1E9E3;
     margin: 0.15rem 0rem 0.15rem 0rem;
-    width: 6.2rem;
     height: 4rem;
     font-size: 2rem;
-    transition: 0.1s ease-in-out;
-}
-#btn_openRangeModal {
-    margin-left: 0.5rem;   
 }
 
 /* line */
 .line_01 {
     border-width: 1px 0 0 0;
 	border-style: solid;
-	border-color: #C3ECF3;
+	border-color: #ffffff;
     margin: -0.5rem 0rem -0.8rem 0rem;
 }
 
@@ -68,25 +64,25 @@ button {
 .answer {
     vertical-align: center;
     font-size: 1.8rem;   
-    color: #C3ECF3;
 }
 #answer {
     padding: 0.4rem;
     margin: 0rem 0rem -1rem 0rem;
     width: 8rem;
-    border: 2px solid #C3ECF3;
+    border: 2px solid ;
     font-size: 2.5rem;   
-    color: #C3ECF3;
     border-radius: 0px;
+    color: #ffffff;
     background-color: #3A3A3A;   
 }
 input:focus {
     outline: none;
     box-shadow: none;
   }
-input::placeholder {
-    color: #C3ECF3;
-  }
+ #result {
+    margin: -0.4rem;
+    font-size: 1.4rem;   
+ } 
 #hint {
     margin: 0.8rem;
     font-size: 1.2rem;
@@ -101,7 +97,7 @@ input::placeholder {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* 半透明の黒背景 */
+    background-color: rgba(255, 255, 255, 0.5); /* 透過 */
 }
 
 /* modal content */
@@ -118,7 +114,7 @@ input::placeholder {
 .ptns {
     margin: 0rem 1rem 0rem 1rem ;
     transform: scale(1.5);
-    accent-color: #C3ECF3;    
+    accent-color: #C1E9E3;    
 }
 /* modal close */
 .close {

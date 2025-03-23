@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WebCalc</title>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div>
+        <!--問題-->
+        <p id="question"></p>
+        <p class="answer">= <input type="number" id="answer" oninput="answerInput()"></p>
+        <!--解答-->
+        <p id="result"></p>
+    </div>
+    <!--数値入力ボタン-->
+    <div>
+        <p>
+            <button id="btn_7" class="btn_num" data-value="8">7</button>
+            <button id="btn_8" class="btn_num" data-value="8">8</button>
+            <button id="btn_9" class="btn_num" data-value="9">9</button>
+            <br>
+            <button id="btn_4" class="btn_num" data-value="4">4</button>
+            <button id="btn_5" class="btn_num" data-value="5">5</button>
+            <button id="btn_6" class="btn_num" data-value="6">6</button>
+            <br>
+            <button id="btn_1" class="btn_num" data-value="1">1</button>
+            <button id="btn_2" class="btn_num" data-value="2">2</button>
+            <button id="btn_3" class="btn_num" data-value="3">3</button>
+            <br>
+            <button id="btn_c" class="btn_num" data-value="">C</button>
+            <button id="btn_0" class="btn_num" data-value="0">0</button>
+            <button id="btn_bs" class="btn_num" data-value="">BS</button>
+        </p>
+    </div>
+
+
+    <hr class="line_01" />
+
+    <!--各種ボタン-->
+    <div>
+        <button id="btn_openHintModal">Hint</button>
+        <button id="btn_skip" onclick="generateQuestion()">Skip</button>
+        <button id="btn_openRangeModal">Settings</button>
+    </div>
+
+    <!--Modal: ヒント-->
+    <div id="hintModal" class="modal">
+        <div class="modal-content">
+            <span class="close close-hint">&times;</span>
+            <h2>ヒント</h2>
+            <p id="hint"></p>
+        </div>
+    </div>
+
+    <!--Modal: 出題パターン-->
+    <div id="rangeModal" class="modal">
+        <div class="modal-content">
+            <span class="close close-range">&times;</span>
+            <h2>出題パターン</h2>
+            <label><input type="checkbox" class="ptns" value="1"> 1: 100に近い数同士</label><br>
+            <label><input type="checkbox" class="ptns" value="2"> 2: 一の位を繰り上げ</label><br>
+            <label><input type="checkbox" class="ptns" value="3"> 3: 同じ数でくくる</label><br>
+            <label><input type="checkbox" class="ptns" value="4"> 4: 十の位の積＋端数</label><br>
+            <label><input type="checkbox" class="ptns" value="5"> 5: 2乗 (X + Y)*(X - Y)</label><br>
+            <label><input type="checkbox" class="ptns" value="6"> 6: その他</label><br>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -135,7 +135,7 @@ function checkAnswer() {
     } else if (userAnswer != "") {                              // 不正解
         resultText = "Try again!";
     } else {                                                    // 未解答：正解を表示
-        resultText = `Right Answer：${correctAnswer} `;
+        resultText = `Correct Answer：${correctAnswer} `;
         showHint();
     }
 
@@ -146,36 +146,55 @@ function checkAnswer() {
 function showHint() {
     let arrHintTexts
     const pattern = judgePattern();
+    const title1 = "100に近い数同士 <br> → 100との差分を利用"
     const arrHint1 = [
-        '100^2 - " & "100 * ( X  +  Y ) + ( X  *  Y )<br>',
-        'X: 100 - 数1',
-        'Y: 100 - 数2'
+        `100^2 - 100(X  +  Y) + (X  *  Y)<br>`,
+        `X: 100 - ${num1}`,
+        `Y: 100 - ${num2}`
     ];
+    const title2 = "一の位の和が10 <br> → 1繰り上げて掛ける"
     const arrHint2 = [
-        '100 * ((◆ + 1) * ◇) + (● * ○)<br>',
-        `■■□□`,
-        `□□■■`
+        `上2桁: (${tens1} + 1) * ${tens2} = ??`,
+        `下2桁: ${ones1} * ${ones2}       = ??<br>`,
+        `　? ? 0 0`,
+        `+ 　　? ?`,
+        `-----------`
     ];
+    const title3 = "十の位が共通 → 同じ数でくくる"
     const arrHint3 = [
-        '◆0 * (◆● + ○) + (● * ○)<br>',
-        `■■□`,
-        `□■■`
+        `上2桁: (${num1} + ${ones2}) * ${tens1*10} = ??`,
+        `　　　 ↑数1　↑数2 (一の位)`,
+        `下2桁: ${ones1} * ${ones2} = ??<br>`,
+        `　? ? 0`,
+        `+ 　? ?`,
+        `---------`
     ];
+    const title4 = "十の位の和が10 <br> → 十の位同士を掛ける"
     const arrHint4 = [
-        '100 * ((◆ * ◇) + ●) + (● * ○)<br>',
-        `■■□□`,
-        `□□■■`
+        `上2桁: (${tens1} * ${tens2}) + ${ones1} = ??`,
+        `下2桁: ${ones1} * ${ones2} = ??<br>`,
+        `　? ? 0 0`,
+        `+ 　　? ?`,
+        `-----------`
     ];
+    const title5 = "(X + Y)*(X - Y) = X^2 - Y^2"
     const arrHint5 = [
-        'X^2 - Y^2<br>',
         'X: 大きいほうの数の[十の位]',
         'Y: 大きいほうの数の[一の位]'
     ];
+    const title6 = "その他"
     const arrHint6 = [
-        '100(◆*◇) + 10(◆*○ + ◇*●) + (●*○)'
+        `${tens1} * ${tens2} = ??`,
+        `(${tens1} * ${ones2}) + (${tens2} * ${ones1}) = ??`,
+        `${ones1} * ${ones2} = ??<br>`,
+        `　? ? 0 0`,
+        `　　? ? 0`,
+        `+ 　　? ?`,
+        `-----------`
     ];
     arrHintTexts = eval(`arrHint${pattern}`);
-    arrHintTexts.splice(0, 0, `Pattern: ${pattern}<br>`);
+    const title = eval(`title${pattern}`)
+    arrHintTexts.splice(0, 0, `${title}<br>`);
     elemId_hint.innerHTML = arrHintTexts.join('<br>');
 }
 

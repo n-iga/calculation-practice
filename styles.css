@@ -16,6 +16,7 @@ body {
     font-size: 1.2rem;
     color: #778899;
     background-color: #f5f5f5;
+    overflow: hidden;
 }
 div {
     margin-top: 1.8rem;    
@@ -35,11 +36,7 @@ button {
     border-radius: 3px;
     transition: 0.1s ease-in-out;
 }
-button:hover {
-    background-color: white;
-    color: #778899;
-    border: 2px solid #778899;
-}
+
 .btn_num {
     background-color: #778899;
     color: white;
@@ -94,7 +91,7 @@ input::placeholder {
     font-size: 1.2rem;
 }
 
-/* モーダルの背景 */
+/* modal */
 .modal {
     display: none; /* 初期状態では非表示 */
     position: fixed;

@@ -280,7 +280,7 @@ window.addEventListener("click", function (event) {
     }
 });
 
-// スマホ判定（画面幅640px以下）
+// デバイス判定（スマートフォン：true）
 function checkSmartPhone() {
     if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
         return true;

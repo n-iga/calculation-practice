@@ -16,6 +16,16 @@
         <p class="answer">= <input type="number" id="answer" oninput="answerInput()"></p>
         <!--解答-->
         <p id="result"></p>
+
+        <hr class="line_01" />
+
+        <!--各種ボタン-->
+        <p>
+            <button id="btn_openHintModal">Hint</button>
+            <button id="btn_skip" onclick="generateQuestion()">Skip</button>
+            <button id="btn_openRangeModal">Settings</button>
+        </p>
+
         <!--数値入力ボタン-->
         <p>
             <button id="btn_7" class="btn_num" data-value="7">7</button>
@@ -33,18 +43,6 @@
             <button id="btn_c" class="btn_num" data-value="">C</button>
             <button id="btn_0" class="btn_num" data-value="0">0</button>
             <button id="btn_bs" class="btn_num" data-value="">BS</button>
-        </p>
-    </div>
-
-
-    <hr class="line_01" />
-
-    <div>
-        <!--各種ボタン-->
-        <p>
-            <button id="btn_openHintModal">Hint</button>
-            <button id="btn_skip" onclick="generateQuestion()">Skip</button>
-            <button id="btn_openRangeModal">Settings</button>
         </p>
     </div>
 
